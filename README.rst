@@ -125,7 +125,6 @@ Or in Python:
 
     import qrcode
     import qrcode.image.svg
-
     
     method = input("What method? (basic, fragment, path): ")
     
@@ -133,13 +132,11 @@ Or in Python:
         # Simple factory, just a set of rects.
         factory = qrcode.image.svg.SvgImage
     elif method == 'fragment':
-        # Fragment factory (also just a set of rects)
         # Fragment factory (no standalone header)
         factory = qrcode.image.svg.SvgFragmentImage
     else:
         # Combined path factory, fixes white space that may occur when zooming
         factory = qrcode.image.svg.SvgPathImage
-
     
     img = qrcode.make('Some data here', image_factory=factory)
     
@@ -196,7 +193,6 @@ Styled Image
 
 Works only with versions_ >=7.2 (SVG styled images require 7.4).
 
-.. _versions: https://github.com/lincolnloop/python-qrcode/blob/master/CHANGES.rst#72-19-july-2021
 
 To apply styles to the QRCode, use the ``StyledPilImage`` or one of the
 standard SVG_ image factories. These accept an optional ``module_drawer``
