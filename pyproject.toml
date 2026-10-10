@@ -129,7 +129,7 @@ lint.ignore = [
   "N806", # Variable should be lowercase
   "PERF401", # Use `list.extend` to create a transformed list
   "S101", # Use of 'assert' detected
-
+  "CPY001",
   # Required for `ruff format` to work correctly
   "COM812", # Checks for the absence of trailing commas
   "ISC001", # Checks for implicitly concatenated strings on a single line

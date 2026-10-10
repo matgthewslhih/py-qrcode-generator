@@ -3,7 +3,7 @@ This file provides zest.releaser entrypoints using when releasing new
 qrcode versions.
 """
 
-import datetime
+import datetime as dt
 import re
 from pathlib import Path
 
@@ -33,7 +33,7 @@ def update_manpage(data):
             # Update version
             parts[3] = data["new_version"]
             # Update date
-            parts[1] = datetime.datetime.now(tz=datetime.timezone.utc).strftime(
+            parts[1] = dt.datetime.now(tz=dt.timezone.utc).strftime(
                 "%-d %b %Y"
             )
             lines[i] = '"'.join(parts)

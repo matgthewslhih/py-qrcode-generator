@@ -1,4 +1,4 @@
-import datetime
+import datetime as dt
 import re
 from unittest import mock
 
@@ -37,7 +37,7 @@ def test_change(mock_file):
         .replace("version", "3.11")
         .replace(
             "date",
-            datetime.datetime.now(tz=datetime.timezone.utc).strftime("%-d %b %Y"),
+            dt.datetime.now(tz=dt.timezone.utc).strftime("%-d %b %Y"),
         )
     )
     mock_file().write.assert_has_calls(
